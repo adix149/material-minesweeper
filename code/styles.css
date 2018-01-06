@@ -1,0 +1,237 @@
+:root {
+    --numRows: 10;
+    --numCols: 10;
+
+  }
+body {
+  background-color: #ffffff;
+  display: inline-block;
+  background-image: url("imgs/back_1.jpg");
+}
+/*
+label {
+  color: #f6f7f4 !important;
+}
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after {
+    background-color: #ffffff !important;
+}
+[type="radio"]:checked+label:before {
+    border: 2px solid #ffffff !important;
+}
+type="radio"]:not(:checked)+label:before, [type="radio"]:not(:checked)+label:after {
+    border: 2px solid #ffffff !important;
+}
+*/
+
+label {
+font-size: 1.3rem !important;
+}
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:not(:checked) + label:after {
+  border: 2px solid #ffffff !important;
+   font-weight: bold !important;
+}
+
+[type="radio"]:checked + label:before {
+  border: 2px solid #ffffff !important;
+   font-weight: bold !important;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:before,
+[type="radio"].with-gap:checked + label:after {
+  border: 2px solid #ffffff !important;
+   font-weight: bold !important;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:after {
+  background-color: #ffffff !important;
+   font-weight: bold !important;
+}
+[type="radio"]:not(:checked)+label:before, [type="radio"]:not(:checked)+label:after {
+    border: 2px solid #ffffff !important;
+   font-weight: bold !important;
+}
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:not(:checked) + label:after {
+  border: 2px solid #ffffff !important;
+   font-weight: bold !important;
+}
+
+#MainTitle {
+  font-family: 'Nosifer', cursive;
+  font-size: 3rem;
+  color: #ffffff;
+}
+nav {
+  height: 85px !important;
+  background-color: #3c9688 !important;
+}
+
+#MinesSweeper {
+    display: grid;
+    grid-template-columns: 1fr ;
+    /*margin-top: 20%;*/
+    /*width: 400px;*/
+    /*width: calc((var(--numCols)*35)*1px);*/
+}
+#cardId {
+  width:500px;
+margin:0 auto;
+background: rgb(0,74,170);
+position:absolute;
+left:35%;
+top:40%;
+
+}
+
+#cardId2 {
+  position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#game {
+  display: inline-block;
+}
+.input-field input[type=text]: label {
+     color: #756e6e;
+}
+.dataWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.3rem !important;
+    /*width: auto;*/
+    /*width: calc((var(--numCols)*35)*1px);*/
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(var(--numCols),1fr);
+    grid-template-rows: repeat(var(--numRows),1fr);
+    grid-gap: 1px;
+  /*  width: (var(--numCols)*30)px;*/
+    max-height: auto;
+    /*margin-right: auto;*/
+/*    grid-auto-columns: auto;*/
+
+  }
+.cell {
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    overflow: auto;
+    text-align: center;
+    background-color: #c0326954;
+    /*background-image: url("imgs/butt1.jpg");*/
+}
+.cell_flagged_1 {
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    overflow: auto;
+    text-align: center;
+    background-image: url("imgs/flag2.png");
+}
+.cell_flagged_2 {
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    overflow: auto;
+    text-align: center;
+    background-image: url("imgs/ques.png");
+}
+.cell_mine {
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    overflow: auto;
+    text-align: center;
+    background-image: url("imgs/mine_before2.png");
+}
+.cell_clicked_0 {
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    overflow: auto;
+    text-align: center;
+    background-image: url("imgs/0.jpg");
+}
+.cell_clicked_1 {
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    overflow: auto;
+    text-align: center;
+    background-image: url("imgs/1.jpg");
+}
+.cell_clicked_2 {
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    overflow: auto;
+    text-align: center;
+    background-image: url("imgs/2.jpg");
+}
+.cell_clicked_3 {
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    overflow: auto;
+    text-align: center;
+    background-image: url("imgs/3.jpg");
+}
+.cell_clicked_4 {
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    overflow: auto;
+    text-align: center;
+    background-image: url("imgs/4.jpg");
+}
+.cell_clicked_5 {
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    overflow: auto;
+    text-align: center;
+    background-image: url("imgs/5.jpg");
+}
+.cell_clicked_6 {
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    overflow: auto;
+    text-align: center;
+    background-image: url("imgs/6.jpg");
+}
+.cell_clicked_7 {
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    overflow: auto;
+    text-align: center;
+    background-image: url("imgs/7.jpg");
+}
+.cell_clicked_8 {
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    overflow: auto;
+    text-align: center;
+    background-image: url("imgs/8.jpg");
+}

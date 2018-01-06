@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>AdiMinesweeper</title>
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body class="valign-wrapper center-align" onload="DoDivBox(16,30,99)">
+  <nav>
+    <div class="nav-wrapper">
+      <div >
+          <h1 id='MainTitle' class="center-align center brand-logo"> Minesweeper </h1>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="card teal  z-depth-4 center-align scale-transition scale-in  " id= "cardId">
+    <a id="nextFab" class="btn-floating halfway-fab waves-effect waves-light red" onclick="levelSelection(event)"  ><i class="material-icons ">navigate_next</i></a>
+    <div class="card-content black-text">
+      <div id="levlSelectorWrapper" action="#">
+        <form  id="levlSelector" >
+          <p>
+            <input  name="lvlSel" type="radio" id="Begin" value="Beginner" />
+            <label class="white-text" for="Begin">Beginner</label>
+          </p>
+          <p>
+            <input name="lvlSel" type="radio" id="Inter" value="Intermediate" />
+            <label class="white-text" for="Inter">Intermediate</label>
+          </p>
+          <p>
+            <input name="lvlSel" type="radio" id="Exp" value="Expert" checked="checked" />
+            <label class="white-text" for="Exp">Expert</label>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="card teal scale-transition scale-in z-depth-4 " id= "cardId2" style="display: none;">
+      <div id="game" action="#">
+        <form id ="MinesSweeper" >
+          <div id="Data" class="dataWrapper white-text">
+            <div> Mines: <output id = "mRemaining"></output> </div>
+            <div> Time: <output id = "mTime"></output> </div>
+          </div>
+          <div id="MineTable" class="wrapper"> </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+    <!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="scripts.js"></script>
+  </body>
+</html>
